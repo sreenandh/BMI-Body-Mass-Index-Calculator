@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <div class="form-group">
+            <label for="height">Height (in centimeters):</label>
+            <input type="number" id="height" placeholder="Enter height" min="0" step="any">
+        </div>
+        <div class="form-group">
+            <label for="weight">Weight (in kilograms):</label>
+            <input type="number" id="weight" placeholder="Enter weight" min="0" step="any">
+        </div>
+        <button id="calculateBtn">Calculate BMI</button>
+
+        <div class="result">
+            <h2>Your BMI is: <span id="bmiResult">--</span></h2>
+            <h3>Status: <span id="bmiStatus">--</span></h3>
+        </div>
+
+        <div class="speedometer">
+            <div class="needle-container">
+                <div class="needle"></div>
+                <div class="needle-arrow"></div>
+            </div>
+            <div class="speedometer-labels">
+                <span>Underweight</span>
+                <span>Healthy</span>
+                <span>Overweight</span>
+                <span>Obese</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
