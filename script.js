@@ -4,6 +4,7 @@ document.getElementById('calculateBtn').addEventListener('click', function() {
 
     const height = heightCm / 100;
 
+
     if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
         alert('Please enter valid height and weight values.');
         return;
@@ -43,9 +44,11 @@ function animateBMISpeedometer(bmi) {
         rotationAngle = 180; // Obese
     }
 
+
     gsap.to('.needle-container', {
         rotation: rotationAngle,
         duration: 1,
         ease: 'power2.out',
     });
 }
+
