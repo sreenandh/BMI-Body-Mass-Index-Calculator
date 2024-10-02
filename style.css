@@ -6,20 +6,41 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+ 
+    background-image: url('https://thumbs.dreamstime.com/z/bmi-body-mass-index-weight-loss-banner-background-bmi-body-mass-index-weight-loss-banner-background-vector-157645716.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    
+    filter: blur(5px); 
+    z-index: -1; 
 }
 
 .container {
-    background-color: #fff;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9); 
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 400px;
+    z-index: 1; 
 }
 
 h1 {
@@ -67,10 +88,10 @@ button:hover {
     height: 100px;
     margin: 30px auto;
     background: conic-gradient(
-        #007bff 0% 25%,   /* Underweight */
-        #28a745 25% 50%,  /* Healthy */
-        #ffc107 50% 75%,  /* Overweight */
-        #dc3545 75% 100%  /* Obese */
+        #007bff 0% 25%,   
+        #28a745 25% 50%,  
+        #ffc107 50% 75%,  
+        #dc3545 75% 100%  
     );
     border-radius: 100px 100px 0 0;
     overflow: hidden;
@@ -91,7 +112,7 @@ button:hover {
     bottom: 0;
     left: 50%;
     transform-origin: bottom center;
-    transform: rotate(-90deg); /* Initial position at 0 (Underweight) */
+    transform: rotate(-90deg); 
 }
 
 .needle {
